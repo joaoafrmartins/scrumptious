@@ -1,0 +1,127 @@
+.scrum-list(@color, @content) {
+
+  .border-radius;
+
+  opacity: 0.8;
+  padding: 10px 10px 10px 10px;
+
+  & > header,
+  & > footer{
+
+    span[state] {
+
+      .border-radius;
+
+      float: right;
+      margin-right: 10px;
+      &::after {
+        content: @content;
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+    }
+
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: darken(@color, 20%);
+
+    [buttons] {
+      width: 100%;
+      display: none !important;
+    }
+
+  }
+
+  & > header {
+
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: @color;
+    .title {
+
+    }
+
+  }
+
+  & > section {
+
+    height: 175px;
+    background: @list-well;
+    overflow: auto;
+
+    li.edit {
+
+      padding: 10px;
+      min-height: 40px;
+
+      [editor] {
+        border: 1px dotted @color;
+      }
+
+    }
+
+  }
+
+  & > footer {
+
+    .border-bottom-radius(4px);
+
+    color: @color;
+    background: @list-well;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  &:hover {
+
+    section, footer {
+      background: lighten(@list-well, 5%);
+    }
+
+    [buttons] {
+      .pull-left;
+      display: inline-block !important;
+    }
+
+  }
+}
+
+[board] {
+
+  [story] {
+
+    [list] {
+
+      &[data-col='1'] {
+        .scrum-list(@backlog, @backlog-content);
+      }
+
+      &[data-col='2'] {
+        .scrum-list(@todo, @todo-content);
+      }
+
+      &[data-col='3'] {
+        .scrum-list(@in-progress, @in-progress-content);
+      }
+
+      &[data-col='4'] {
+        .scrum-list(@peer-review, @peer-review-content);
+      }
+
+      &[data-col='5'] {
+        .scrum-list(@done, @done-content);
+      }
+
+      [tasks] {
+        padding: 0px 0px 0px 0px;
+      }
+
+    }
+
+  }
+
+}

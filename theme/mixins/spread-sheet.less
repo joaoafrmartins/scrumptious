@@ -1,0 +1,45 @@
+@import "./for.less";
+
+.spread-sheet-fluid
+(
+  @cols: 3,
+  @rows: 3,
+  @width: 100%,
+  @margin-right: 2.5%,
+  @height: 100%,
+  @margin-bottom: 2.5%
+) {
+
+  @col-width: (@width - @margin-right) / @cols;
+  @col-margin: @margin-right / @cols;
+  @row-height: (@height - @margin-bottom) / @rows;
+  @row-margin: @margin-bottom / @rows;
+
+  .for(@cols); .-each(@xx) {
+
+    [data-col="@{xx}"] {
+      left: (@xx - 1) * (@col-width + @col-margin);
+    }
+
+    [data-sizex="@{xx}"] {
+      width: @xx * @col-width;
+    }
+
+  }
+
+  .for(@rows); .-each(@yy) {
+
+    [data-row="@{yy}"] {
+
+      top: (@yy - 1) * (@row-height + @row-margin);
+      z-index: @yy !important;
+
+    }
+
+    [data-sizey="@{yy}"] {
+      height: @yy * @row-height;
+    }
+
+  }
+
+}

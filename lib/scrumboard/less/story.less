@@ -1,0 +1,41 @@
+[board] {
+
+  [story] {
+
+    .spread-sheet-fluid(5, 20);
+
+    padding: 0px;
+    min-height: 320px;
+
+    .preview-holder {
+      border: none!important;
+      background: @list-well!important;
+      opacity: 0.1;
+    }
+
+    .player {
+      opacity: 0.8;
+    }
+
+    &:hover {
+
+      background: lighten(@board, 5%);
+
+      & > [buttons] {
+        float: right;
+        display: block !important;
+      }
+
+    }
+
+    & > [buttons] {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      display: none !important;
+
+    }
+
+  }
+
+}

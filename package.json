@@ -1,0 +1,53 @@
+{
+  "name": "scrumptious",
+  "version": "0.0.0",
+  "description": "Scrumptious",
+  "keywords": [
+    "scrumptious"
+  ],
+  "dependencies": {
+    "jquery": "",
+    "gridster": "joaoafrmartins/gridster.js",
+    "space-pen": "",
+    "theorist": "",
+    "bootstrap": "",
+    "font-awesome": ""
+  },
+  "devDependencies": {
+    "coffeeify": "",
+    "lessify": "",
+    "browserify-shim": ""
+  },
+  "scripts": {
+    "build": "browserify . -d -o ./app/main.js",
+    "minify": "cat ./app/main.js | uglifyjs > ./app/main.js"
+  },
+  "main": "lib/main",
+  "browser": {
+    "jquery": "jquery",
+    "app": "./lib/index.coffee",
+    "scrum": "./lib/scrum/index.coffee",
+    "notify": "./lib/notify/index.coffee"
+  },
+  "lessify": {
+    "source-map-map-inline": true
+  },
+  "browserify": {
+    "transform": [
+      "lessify",
+      "coffeeify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "jQuery"
+  },
+  "homepage": "https://github.com/joaoafrmartins/scrumptious",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaoafrmartins/scrumptious.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaoafrmartins/scrumptious/issues"
+  }
+}

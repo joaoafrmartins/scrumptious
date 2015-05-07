@@ -1,0 +1,54 @@
+{
+  "root": "/home/ubuntu/.workspace/scrumptious",
+  "rcfile": "/home/ubuntu/.workspace/scrumptious/.developmentserverrc",
+  "views": {
+    "HttpServerView": "http",
+    "LiveReloadView": "livereload",
+    "BrowserView": "browser",
+    "TerminalView": "terminal",
+    "ShortcutsView": "shortcuts",
+    "NotifyView": "notify"
+  },
+  "livereload": {
+    "root": "/home/ubuntu/.workspace/scrumptious/app",
+    "port": 35729,
+    "timeout": 1000
+  },
+  "http": {
+    "root": "/home/ubuntu/.workspace/scrumptious/app",
+    "port": 8080,
+    "timeout": 1000,
+    "snippet": "\n<!-- livereload snippet -->\n\n<script src=\"http://localhost:35729/livereload.js\"></script>\n"
+  },
+  "browser": {
+    "title": "Preview",
+    "uri": "http://localhost:8080",
+    "split": "right",
+    "searchAllPanes": true,
+    "changeFocus": false
+  },
+  "terminal": {
+    "title": "Terminal",
+    "split": "right",
+    "searchAllPanes": true,
+    "changeFocus": false,
+    "cwd": "/home/ubuntu/.workspace/todos",
+    "shell": "/bin/bash"
+  },
+  "shortcuts": {
+    "subscriptions": {
+      "core:save": [
+        "build"
+      ]
+    },
+    "actions": {
+      "build": "npm run build"
+    }
+  },
+  "notify": {
+    "delay": 2500,
+    "level": "info",
+    "position": "top",
+    "notify": []
+  }
+}

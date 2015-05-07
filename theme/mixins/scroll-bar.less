@@ -1,0 +1,60 @@
+.scroll-bar(@color) {
+
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-button:start:increment,
+  ::-webkit-scrollbar-button:start:decrement,
+  ::-webkit-scrollbar-button:end:increment,
+  ::-webkit-scrollbar-button:end:decrement {
+
+    width: 9px;
+    height: 9px;
+    display: none;
+
+  }
+
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-button:start:decrement,
+  ::-webkit-scrollbar-button:end:increment {
+
+    display: block;
+
+  }
+
+  ::-webkit-scrollbar-track {
+
+    border-radius: 4.5px;
+    background: @color;
+
+    :disabled {
+
+      display: none;
+
+    }
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+
+    border-radius: 4.5px;
+    background: @color;
+    border: 1px inset @color;
+
+    -webkit-transition: background-color 2.5s linear;
+
+  }
+
+  :hover::-webkit-scrollbar-thumb {
+
+    background: @color;
+
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+
+    background: @color;
+
+  }
+
+}
+
+.scroll-bar(#33333);

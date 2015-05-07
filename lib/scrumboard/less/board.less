@@ -1,0 +1,29 @@
+[board] {
+
+  background-color: @board;
+  min-height: 100%;
+  margin: 0 auto;
+
+  ul {
+
+    list-style-type: none;
+
+  }
+
+  & > [buttons] {
+
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    z-index: 10;
+
+    [button] {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+    }
+
+  }
+
+}

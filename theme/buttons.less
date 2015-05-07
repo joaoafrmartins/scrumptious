@@ -1,0 +1,109 @@
+.define-icon(@var) {
+  @icon: 'fa-var-@{var}';
+}
+
+.fa-button-icon(@icon) {
+
+  i {
+
+    .fa;
+
+    .define-icon(@icon);
+
+    &:before{
+      content: @@icon;
+    }
+
+  }
+}
+
+[button] {
+
+  .btn;
+
+  opacity: 0.5;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+
+  color: @text;
+
+}
+
+[button]:hover {
+
+  color: #ddd;
+
+}
+
+[button='edit'] {
+
+  .fa-button-icon("pencil");
+
+}
+
+[button='delete'] {
+
+  .fa-button-icon("trash");
+
+}
+
+[button='add'] {
+
+  .fa-button-icon("plus-square");
+
+}
+
+[button='link'] {
+
+  .fa-button-icon("link");
+
+}
+
+[button='cut'] {
+
+  .fa-button-icon("cut");
+
+}
+
+[button='copy'] {
+
+  .fa-button-icon("copy");
+
+}
+
+[button='paste'] {
+
+  .fa-button-icon("paste");
+
+}
+
+[button='download'] {
+
+  .fa-button-icon("download");
+
+}
+
+[button='upload'] {
+
+  .fa-button-icon("upload");
+
+}
+
+[button='list'] {
+
+  .fa-button-icon("th-list");
+
+}
+
+[button='up'] {
+
+  .fa-button-icon("chevron-up");
+
+}
+
+[button='save'] {
+
+  .fa-button-icon("save");
+
+}

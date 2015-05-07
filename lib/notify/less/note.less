@@ -1,0 +1,104 @@
+[note] {
+
+  .border-radius;
+
+  min-height: 100px;
+  min-width: 100%;
+  height: 100%;
+  z-index: 99999;
+  margin-bottom: .5em;
+
+  & * { color: @text; }
+
+  [title] {
+
+    .border-radius;
+
+    font-weight: 900;
+    border: none;
+    width: 100%;
+    padding: 2.5px;
+    font-size: 14px;
+    margin-bottom: 0px;
+
+    [icon] {
+
+      .fa;
+      .pull-left;
+      padding: 0 .3em 0 .3em;
+
+    }
+
+    [close] {
+
+      .fa;
+      float: right;
+      padding: .3em .3em 0 .3em;
+      &::after {
+        content: @fa-var-close;
+        opacity: .5;
+      }
+
+    }
+
+  }
+
+  [envelope] {
+    vertical-align: middle;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+  }
+
+  [message] {
+    font-weight: 900;
+    text-align: justify;
+    font-style: italic;
+  }
+
+
+  &[level='error'] {
+    background-color: @notify-error;
+    [title] {
+      [icon] {
+        &::after {
+          content: @fa-var-times-circle;
+        }
+      }
+    }
+  }
+
+  &[level='warning'] {
+    background-color: @notify-warning;
+    [title] {
+      [icon] {
+        &::after {
+          content: @fa-var-exclamation-circle;
+        }
+      }
+    }
+  }
+
+  &[level='info'] {
+    background-color: @notify-info;
+    [title] {
+      [icon] {
+        &::after {
+          content: @fa-var-info-circle;
+        }
+      }
+    }
+  }
+
+  &[level='success'] {
+    background-color: @notify-success;
+    [title] {
+      [icon] {
+        &::after {
+          content: @fa-var-check-circle;
+        }
+      }
+    }
+  }
+
+}
