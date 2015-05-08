@@ -49,5 +49,6 @@
   },
   "bugs": {
     "url": "https://github.com/joaoafrmartins/scrumptious/issues"
-  }
+  },
+  "license": "MIT"
 }
